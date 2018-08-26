@@ -7,6 +7,9 @@
       <li class="nav-item">
         <a class="nav-link" href="../controller/addVocabulary.php"><i class="fas fa-plus-square"></i> Ajouter du vocabulaire</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../controller/qcm.php"><i class="fas fa-question-circle"></i> Faire le quizz</a>
+      </li>
     </ul>
   </nav>
   <aside>

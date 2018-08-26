@@ -1,5 +1,4 @@
-
-<div class="projects row align-items-center my-3 mx-0">
+<div class="row align-items-center my-3 mx-0">
   <div class="container justify-content-around d-flex flex-wrap text-center py-3">
     <?php
       foreach ($vocabulary as $vocabulary) {
