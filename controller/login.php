@@ -1,7 +1,9 @@
 <?php
-require "../model/dataBase.php";
-require "../model/login.php";
-require "../view/template/header.php";
+require_once "../model/dataBase.php";
+require_once "../model/login.php";
 
-require "../view/loginForm.php";
-require "../view/template/footer.php";
+require_once "../view/template/header.php";
+
+require_once "../view/loginView.php";
+
+require_once "../view/template/footer.php";

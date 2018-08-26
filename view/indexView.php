@@ -1,8 +1,3 @@
-<?php
-require_once "template/header.php";
-?>
-<a href="../controller/subscription.php">S'inscrire</a>
-<a href="../controller/login.php">Se connecter</a>
 
 <div class="projects row align-items-center my-3 mx-0">
   <div class="container justify-content-around d-flex flex-wrap text-center py-3">
@@ -15,7 +10,3 @@ require_once "template/header.php";
     ?>
   </div>
 </div>
-
-<?php
-require_once "template/footer.php";
-?>

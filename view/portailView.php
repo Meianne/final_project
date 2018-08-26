@@ -1,7 +1,3 @@
-<?php
-require_once "template/header.php";
-?>
-
 <main class="text-center">
 
   <!-- ############## Projets ############### -->
@@ -17,7 +13,3 @@ require_once "template/header.php";
     </section>
   </div>
 </main>
-
-<?php
-require_once "template/footer.php";
-?>

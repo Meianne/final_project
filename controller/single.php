@@ -15,4 +15,8 @@ require_once "../model/subject.php";
 $voca = vocabulary($bdd, $id);
 // var_dump($voca);
 
-require "../view/singleView.php";
+require_once "../view/template/header.php";
+
+require_once "../view/singleView.php";
+
+require_once "../view/template/footer.php";

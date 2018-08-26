@@ -162,7 +162,7 @@ textarea {
 
  /* Start index main style*/
 
-  .card:hover, nav a:hover, aside a:hover, .dropup:hover {
+  .card:hover, .dropup:hover {
     font-size: 1.1em;
     opacity: 0.45;
     box-shadow: 6px 6px 15px black;
@@ -202,7 +202,7 @@ textarea {
 
    p {
      font-family: 'Paytone One', sans-serif;
-     font-size: 2em;
+     font-size: 1.5em;
    }
 
 

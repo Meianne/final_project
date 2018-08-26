@@ -1,20 +1,31 @@
 <?php
-if (isset($_POST['connexion'])) {
-  $usernameconnect = htmlspecialchars($_POST['username']);
-  $emailconnect = htmlspecialchars($_POST['email']);
-  $passwordconnect = sha1($_POST['password']);
-  if (!empty($usernameconnect) AND !empty($emailconnect) AND !empty($passwordconnect)) {
-    $requser = $bdd->prepare("SELECT * FROM member WHERE username = ? AND email = ? AND password = ?");
-    $requser->prepare(array($usernameconnect, $emailconnect, $passwordconnect));
-    $userExist = $requser->rowCount();
-    if ($userExist == 1) {
-      // code...
+  if (isset($_POST['login'])) {
+    $usernameConnect = htmlspecialchars($_POST['usernameConnect']);
+    $emailConnect = htmlspecialchars($_POST['emailConnect']);
+    $passwordConnect = sha1($_POST['passwordConnect']);
+
+    if (!empty($usernameConnect) AND !empty($emailConnect) AND !empty($passwordConnect)) {
+      $reqUser = $bdd->prepare("SELECT id, username, email, password
+        FROM member
+        WHERE username = ?
+        AND email = ?
+        AND password = ?");
+      $reqUser->execute(array($usernameConnect, $emailConnect, $passwordConnect));
+      $userExist = $reqUser->rowCount();
+
+      if ($userExist == 1) {
+        $userInfo = $reqUser->fetch();
+        $_SESSION['id'] = $userInfo['id'];
+        $_SESSION['username'] = $userInfo['username'];
+        $_SESSION['email'] = $userInfo['email'];
+        header("Location: ../view/profilView.php?id=" . $_SESSION['id']);
+      }
+      else {
+        $message = "Mauvais identifiant ou mot de passe !";
+      }
+
     }
     else {
-      $message = "Identifiant ou email incorrect !";
+      $message = "Tous les champs doivent être complétés !";
     }
   }
-  else {
-    $message = "Tous les champs doivent être complétés !";
-  }
-}

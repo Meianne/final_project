@@ -1,13 +1,13 @@
-<div align="center">
+<div class="my-4" align="center">
   <h2>Inscription</h2>
-  <form class="" action="" method="post">
+  <form method="post">
     <table>
       <tr>
         <td>
           <label for="username">Identifiant : </label>
         </td>
         <td>
-          <input type="text" placeholder="Votre identifiant" id="username" name="username" value="<?php if (isset($pseudo)) { echo $pseudo; } ?>" required>
+          <input type="text" placeholder="Votre identifiant" id="username" name="username" value="<?php if (isset($username)) { echo $username; } ?>" required>
         </td>
       </tr>
       <tr>
@@ -36,7 +36,7 @@
       </tr>
     </table>
     <br>
-    <input type="submit" name="validation" value="Valider mon inscription">
+    <input type="submit" name="subscription" value="Valider mon inscription">
   </form>
   <p>
     <?php
@@ -45,5 +45,6 @@
       echo $message;
     } ?>
   </p>
+  <a href="../controller/login.php">Se connecter</a><br>
   <a href="../controller/index.php">Retour à l'accueil</a>
 </div>

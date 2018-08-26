@@ -1,6 +1,6 @@
 <?php
-require "../model/dataBase.php";
-require "../model/vocabulary.php";
+require_once "../model/dataBase.php";
+require_once "../model/vocabulary.php";
 
 //Récupère les données dans l'URL
 if(isset($_GET['id']))
@@ -12,4 +12,8 @@ if(isset($_GET['id']))
 $vocabulary = getAllVocabulary($bdd);
 // var_dump($vocabulary);
 
-require "../view/indexView.php";
+require_once "../view/template/header.php";
+
+require_once "../view/indexView.php";
+
+require_once "../view/template/footer.php";

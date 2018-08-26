@@ -1,5 +1,5 @@
 <?php
-  if (isset($_POST['validation'])) {
+  if (isset($_POST['subscription'])) {
     $username = htmlspecialchars($_POST['username']);
     $email = htmlspecialchars($_POST['email']);
     $password = sha1($_POST['password']);

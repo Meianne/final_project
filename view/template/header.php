@@ -21,6 +21,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
   <link rel="stylesheet" href="../public/css/normalize.css">
   <link rel="stylesheet" href="../public/css/main.css">
 
@@ -37,3 +39,4 @@
       </div>
     </div>
   </header>
+  <?php require_once "nav.php"; ?>
